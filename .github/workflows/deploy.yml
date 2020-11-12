@@ -5,9 +5,6 @@ on:
     tags:
       - '*.*.*'
 
-project_id:
-credentials:
-
 env:
   PROJECT_ID: ${{ secrets.GCP_PROD_PROJECT_ID }}
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}

@@ -23,7 +23,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROD_PROJECT_ID }}
   GKE_CLUSTER: ${{ secrets.GKE_CLUSTER}}
   GKE_ZONE: ${{ secrets.GKE_ZONE}}
-  DEPLOYMENT_NAME: ${{ secrets.DEPLOYMENT_NAME}}
+  DEPLOYMENT_NAME: gonic
   IMAGE: gonic
 
 jobs:

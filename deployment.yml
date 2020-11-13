@@ -22,11 +22,11 @@ spec:
           image: eu.gcr.io/PROJECT_ID/IMAGE:TAG
           env:
             - name: GONIC_LISTEN_ADDR
-              value: :5000
+              value: ":5000"
           ports:
             - containerPort: 5000
           resources:
             requests:
-              cpu: 800m
+              cpu: 200m
             limits:
-              cpu: 950m
+              cpu: 850m

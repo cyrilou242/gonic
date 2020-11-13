@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gonic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gonic
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: gonic
+    spec:
+      containers:
+        - name: gonic
+          image: eu.gcr.io/PROJECT_ID/IMAGE:TAG
+          env:
+            - name: GONIC_LISTEN_ADDR
+              value: :5000
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: 800m
+            limits:
+              cpu: 950m

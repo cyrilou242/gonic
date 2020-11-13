@@ -26,9 +26,9 @@ COPY --from=builder \
     /src/gonic \
     /bin/
 VOLUME ["/data", "/music", "/cache"]
-EXPOSE 443
+EXPOSE 80
 ENV GONIC_DB_PATH /data/gonic.db
-ENV GONIC_LISTEN_ADDR :443
+ENV GONIC_LISTEN_ADDR :80
 ENV GONIC_MUSIC_PATH /music
 ENV GONIC_CACHE_PATH /cache
 CMD ["gonic"]
